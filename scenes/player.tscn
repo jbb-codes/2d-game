@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d8lsfdrs7gvg"]
+
+[ext_resource type="SpriteFrames" uid="uid://y02xyfj3hk6l" path="res://player_frames.tres" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://b8jo1gxie1f00" path="res://Walk.png" id="1_g2els"]
+[ext_resource type="Script" uid="uid://k1sul3w8rmjr" path="res://scenes/scripts/player.gd" id="1_qhqgy"]
+
+[node name="Player" type="Node2D" unique_id=1007765607]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1448500128]
+script = ExtResource("1_qhqgy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=415728769]
+sprite_frames = ExtResource("1_3vyb7")
+animation = &"walk_down"
+frame = 1
+frame_progress = 0.71336097
+speed_scale = 1.2
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2011842991]
+visible = false
+texture = ExtResource("1_g2els")
+hframes = 6
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1397784728]
